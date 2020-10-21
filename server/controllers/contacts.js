@@ -7,20 +7,20 @@ let Contacts = require('../models/contacts');
 
 
 module.exports.displayContactlist = (req, res, next) =>{
-        Contacts.find((err, data) =>{
+        Contacts.find((err, contactList) =>{
             if(err) {
                 return console.error(err);
             }
             else{
-                res.render('index', {title: 'Contact List', contactList: data, displayName: req.user ? req.user.displayName : ''});
-                
+                res.render('index', {title: 'Contact List', ContactList: contactList, displayName: req.user ? req.user.displayName : ''});
+                console.log(contactList);
             }
     });
 };
 module.exports.DisplayAddpage = (req,res,next) =>{
     res.render('index', {title: 'Add contacts'});
 };
-module.exports.processAddpage =(req,res,next) =>{ //capture the id of the field, transport into page
+module.exports.processUpdatepage =(req,res,next) =>{ //capture the id of the field, transport into page
     let contact = Contacts({
         "name": req.body.contactName,
         "number":req.body.contactNumber,
@@ -32,7 +32,7 @@ module.exports.processAddpage =(req,res,next) =>{ //capture the id of the field,
             console.log(err);
             res.end(err);
         }else{
-            //refresh the book list
+            //refresh the contact list
             res.redirect('/contacts-list'); // specify where we wanna go
         }
     });

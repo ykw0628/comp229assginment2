@@ -30,27 +30,27 @@
         </thead>
         <tbody>
         <!--Repeated-->
-        <% for (let i = 0; i < contactList.length; i++) { %>
+        <% for (let i = 0; i < ContactList.length; i++) { %>
           <tr>
             <% if(typeof displayName == 'string' && displayName) { %>
             <th scope="row"><%= i %></th>
-            <td><%= contactList[i].name %></td>
-            <td><%= contactList[i].number %></td>
-            <td><%= contactList[i].email %></td>
+            <td><%= ContactList[i].name %></td>
+            <td><%= ContactList[i].number %></td>
+            <td><%= ContactList[i].email %></td>
             <td>
 
-             <a href="/contacts-list/update/<%= contactList[i].id %>" class="btn-primary">
+             <a href="/contacts-list/update/<%= ContactList[i].id %>" class="btn-primary">
              <i class="fas fa-pencil-alt"></i>Update</a>
              </td>
              <td>
-             <a href="/contacts-list/delete/<%= contactList[i].id %>" class="btn-danger">
+             <a href="/contacts-list/delete/<%= ContactList[i].id %>" class="btn-danger">
              <i class="fas fa-trash-alt"></i>Delete</a>
              </td>
              <% } else { %>
             <th scope="row"><%= i %></th>
-            <td><%= contactList[i].name %></td>
-            <td><%= contactList[i].number %></td>
-            <td><%= contactList[i].email %></td>
+            <td><%= ContactList[i].name %></td>
+            <td><%= ContactList[i].number %></td>
+            <td><%= ContactList[i].email %></td>
              <% } %>
           </tr>
         <% } %>
