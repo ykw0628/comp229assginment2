@@ -14,7 +14,7 @@ router.get('/', contactController.displayContactlist);
 router.get('/add', contactController.DisplayAddpage);
 
 //post process the Add page
-router.post('/add', contactController.processUpdatepage);
+router.post('/add', contactController.processAddpage);
 
 //Get Route for displaying the Update page - create operation
 router.get('/update/:id', contactController.DisplayUpdatepage);

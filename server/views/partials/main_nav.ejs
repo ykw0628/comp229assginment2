@@ -37,12 +37,13 @@
         <% } %>
           <a class="nav-link" href="/services">Services </a>
         </li>
-        <% if (title == "Contact List") { %>
+        <% if (title == "Contact List" && typeof displayName == 'string' && displayName) { %>
         <li class="navbar__menu__item">
+           <a class="nav-link" href="/contacts-list">Contacts List </a>
         <% } else  { %>
         <li class="navbar__menu__item">
+           <a class="nav-link" href="/login">Contacts List </a>
         <% } %>
-          <a class="nav-link" href="/contacts-list">Contacts List </a>
         </li>
         <% if (title == "Contact") { %>
         <li class="navbar__menu__item">

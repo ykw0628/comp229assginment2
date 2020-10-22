@@ -497,7 +497,21 @@ Date: Oct. 05.2020
       padding-top: 100px;
       text-align: center;
   }
-
+  #addContacts{
+      display: flex;
+      flex-direction: row-reverse;
+      align-content: flex-end;
+      margin-right: 13px;
+  }
+.updatebuttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.updatebuttons a, button{
+    margin-left: 10px;
+    width: 130px;
+    height: 50px;
+}
   @media screen and (max-width: 768px){
       :root{
           /* Font */
@@ -540,6 +554,15 @@ Date: Oct. 05.2020
              padding: 16px;
              padding-top: 40px;
          }
+         .updatebuttons a, button{
+            margin-left: 5px;
+            width: 80px;
+            height: 30px;
+            font-size: 10px;
+        }
+        .updatebuttons button{
+            font-size: 10px;
+        }
    
   }
   

@@ -21,8 +21,11 @@
     name ="contactEmail" placeholder = "Enter email"  value="<%=contact.email %>"
     required>
   </div>
-  <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-plus-circle"></i>Update Contact</button>
+  <div class = "updatebuttons">
+  <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-plus-circle"></i>Update</button>
+  <a href="/contacts-list/delete/<%= contact.id %>" class="btn btn-danger btn-lg"><i class="fas fa-trash-alt"></i>Delete</a>
   <a href="/contacts-list" class="btn btn-warning btn-lg"><i class="fas fa-undo"></i>Cancel</a>
+  </div>
 </form>
   </div>
 </div>
