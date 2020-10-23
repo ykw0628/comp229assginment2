@@ -8,8 +8,7 @@ let Contacts = require('../models/contacts');
 
 module.exports.displayContactlist = (req, res, next) =>{
         //alphabetically ordered
-        let sort = {name:1};
-   Contacts.find({}, function(
+   Contacts.find({}, {sort: {name: 1}}, function(
         err, contactList){
          
             if(err) {
@@ -18,7 +17,7 @@ module.exports.displayContactlist = (req, res, next) =>{
             else{
                 res.render('index', {title: 'Contact List', ContactList: contactList, displayName: req.user ? req.user.displayName : ''});
             }
-    }).sort(sort);
+    });
 };
 
 module.exports.DisplayAddpage = (req,res,next) =>{
