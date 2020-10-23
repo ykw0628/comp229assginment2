@@ -8,7 +8,7 @@ let Contacts = require('../models/contacts');
 
 module.exports.displayContactlist = (req, res, next) =>{
         //alphabetically ordered
-   Contacts.find({}, {sort: {name: 1}}, function(
+   Contacts.find({}, null, {sort: {name: 1}}, function(
         err, contactList){
          
             if(err) {
