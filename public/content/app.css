@@ -122,10 +122,10 @@ Date: Oct. 05.2020
       width: 100%;
       z-index: 1; 
       position: fixed;
-      color: var(--color-white);
+      color: var(--color-deep-blue);
   }
   #navbar a{
-      color: var(--color-white);
+    color: var(--color-deep-blue);
   }
   
   .kw{
@@ -150,7 +150,7 @@ Date: Oct. 05.2020
   }
   .navbar__menu__item a{
       cursor: pointer;
-      color: var(--color-white);
+      color: var(--color-deep-blue);
       border: 1px solid transparent;
       border-radius: var(--size-border-radius);
       text-decoration: none;
@@ -161,6 +161,9 @@ Date: Oct. 05.2020
       border-radius: var(--size-border-radius);
       background-color: var(--color-deep-blue);
   }
+  .navbar__menu__item a:hover{
+    color: var(--color-white) !important;
+}
   .navbar__logo{
       font-size: var(--font-medium);
       font-weight: var(--weight-semi-bold);
