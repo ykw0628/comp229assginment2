@@ -38,12 +38,14 @@
           <a class="nav-link" href="/services">Services </a>
         </li>
         <!-- redirect to login page if a user is not authenticated -->
-        <% if (title == "Contact List" && typeof displayName == 'string' && displayName) { %>
+        <% if (typeof displayName == 'string' && displayName) { %>
         <li class="navbar__menu__item">
-           <a class="nav-link" href="/contacts-list">Contacts List </a>
+        <a class="nav-link" href="/contacts-list">Contacts List </a>
+        </li>
         <% } else  { %>
         <li class="navbar__menu__item">
            <a class="nav-link" href="/login">Contacts List </a>
+      </li>
         <% } %>
         </li>
         <% if (title == "Contact") { %>
